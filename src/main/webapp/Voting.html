@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Голосование</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Голосование</h1>
+    <form action="/firstapp-1.1.2-SNAPSHOT/voting" method="post">
+        <label for="performer">Лучший исполнитель:</label>
+        <select id="performer" name="performer">
+            <option value="var1">Вариант 1</option>
+            <option value="var2">Вариант 2</option>
+            <option value="var3">Вариант 3</option>
+            <option value="var4">Вариант 4</option>
+        </select>
+
+        <label>Ваши любимые жанры (выберите 3-5):</label>
+        <div>
+            <input type="checkbox" name="genre" value="genre1"> Жанр 1
+            <input type="checkbox" name="genre" value="genre2"> Жанр 2
+            <input type="checkbox" name="genre" value="genre3"> Жанр 3
+            <input type="checkbox" name="genre" value="genre4"> Жанр 4
+            <input type="checkbox" name="genre" value="genre5"> Жанр 5
+        </div>
+        <div>
+            <input type="checkbox" name="genre" value="genre6"> Жанр 6
+            <input type="checkbox" name="genre" value="genre7"> Жанр 7
+            <input type="checkbox" name="genre" value="genre8"> Жанр 8
+            <input type="checkbox" name="genre" value="genre9"> Жанр 9
+            <input type="checkbox" name="genre" value="genre10"> Жанр 10
+        </div>
+
+        <label for="text_about">Краткий текст о вас:</label>
+        <textarea id="text_about" name="text_about" rows="4" cols="50"></textarea>
+
+        <input type="submit" value="Голосовать">
+    </form>
+</div>
+</body>
+</html>

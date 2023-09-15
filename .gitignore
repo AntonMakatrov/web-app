@@ -3,3 +3,5 @@ target/
 *.iml
 logs/
 log/
+.DS_Store
+src/.DS_Store
